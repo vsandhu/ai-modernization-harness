@@ -1,0 +1,22 @@
+pipeline:
+  name: legacy-modernization
+  version: "1.0"
+
+quality_gates:
+  discovery:
+    required_artifacts:
+      - artifacts/inventory/code-inventory.json
+  business_analysis:
+    required_artifacts:
+      - artifacts/evidence/evidence.json
+    rules:
+      evidence_required: true
+      contradictions_block: true
+  reconciliation:
+    human_approval_required: true
+  architecture:
+    human_approval_required: true
+  implementation:
+    tests_must_pass: true
+  validation:
+    parity_threshold: 0.95

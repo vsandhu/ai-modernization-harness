@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BusinessRule",
+  "type": "object",
+  "required": [
+    "ruleId",
+    "name",
+    "condition",
+    "outcome",
+    "classification",
+    "confidence",
+    "evidence"
+  ],
+  "properties": {
+    "ruleId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "classification": {
+      "enum": [
+        "CONFIRMED",
+        "INFERRED",
+        "AMBIGUOUS",
+        "CONTRADICTED",
+        "UNKNOWN"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ambiguity": {
+      "type": "string"
+    }
+  }
+}

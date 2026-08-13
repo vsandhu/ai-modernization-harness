@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence",
+  "type": "object",
+  "required": [
+    "evidenceId",
+    "type",
+    "source",
+    "observation",
+    "confidence"
+  ],
+  "properties": {
+    "evidenceId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "CODE",
+        "TEST",
+        "CONFIG",
+        "DOCUMENT",
+        "RUNTIME"
+      ]
+    },
+    "source": {
+      "type": "object"
+    },
+    "observation": {
+      "type": "string"
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    }
+  }
+}

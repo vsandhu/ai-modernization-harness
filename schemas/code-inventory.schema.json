@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CodeInventory",
+  "type": "object",
+  "required": [
+    "repository",
+    "entryPoints",
+    "modules",
+    "tests",
+    "unresolved"
+  ],
+  "properties": {
+    "repository": {
+      "type": "string"
+    },
+    "entryPoints": {
+      "type": "array"
+    },
+    "modules": {
+      "type": "array"
+    },
+    "tests": {
+      "type": "array"
+    },
+    "unresolved": {
+      "type": "array"
+    }
+  }
+}

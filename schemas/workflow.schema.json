@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workflow",
+  "type": "object",
+  "required": [
+    "workflowId",
+    "name",
+    "trigger",
+    "steps"
+  ],
+  "properties": {
+    "workflowId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array"
+    },
+    "rules": {
+      "type": "array"
+    }
+  }
+}
